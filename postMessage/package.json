@@ -1,0 +1,13 @@
+{
+  "name": "postmessage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run a | npm run b",
+    "a": "http-server a -c-1 -p 11111",
+    "b": "http-server b -c-1 -p 22222"
+  },
+  "author": "",
+  "license": "ISC"
+}

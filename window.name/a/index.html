@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>aaa</title>
+</head>
+<body>
+  
+  <script>
+    
+    console.log('想要b的目标数据');
+    const f = document.createElement('iframe');
+    f.src = 'http://localhost:22222';
+    document.body.appendChild(f);
+    let change = true;
+    f.onload = () => {
+      console.log('iframe已经加载');
+      if (change) {
+        f.src = '/p.html';
+        change = false;
+      }
+      try {
+        console.log(f.contentWindow.name);
+      } catch (error) {
+      }
+    };
+  </script>
+</body>
+</html>
